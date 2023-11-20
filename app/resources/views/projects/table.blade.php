@@ -26,8 +26,10 @@
                                 <i class="far fa-edit"></i>
                             </a>
                             @endif
+                            @if (auth()->check() && (auth()->user()->hasRole('admin') || auth()->user()->can('delete projects')))
 
                             {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                            @endif
                         </div>
                         {!! Form::close() !!}
                     </td>
