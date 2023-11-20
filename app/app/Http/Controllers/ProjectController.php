@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateProjectRequest;
 use App\Http\Controllers\AppBaseController;
 use App\Repositories\ProjectRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 use Flash;
 
 class ProjectController extends AppBaseController

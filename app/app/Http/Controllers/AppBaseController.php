@@ -15,6 +15,23 @@ use InfyOm\Generator\Utils\ResponseUtil;
  */
 class AppBaseController extends Controller
 {
+
+    public function callAction($method, $parameters)
+    {
+
+        $controller = class_basename(get_class($this));
+        $action = $method;
+        $model = str_replace('Controller', '', $controller);
+        $modelPath = 'App\\Models\\'.$model;  
+        $permission = $action.'-'.$controller;
+        // dd($permission);
+        $this->authorize($permission);
+        
+
+        return parent::callAction($method, $parameters);
+    }
+
+    
     public function sendResponse($result, $message)
     {
         return response()->json(ResponseUtil::makeResponse($message, $result));

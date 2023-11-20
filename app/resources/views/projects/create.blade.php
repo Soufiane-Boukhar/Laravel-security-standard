@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@if(auth()->check() && (auth()->user()->hasRole('admin') || auth()->user()->can('create projects')))
+@can('create projects')
 
 <section class="content-header">
     <div class="container-fluid">
@@ -50,5 +50,5 @@
     </div>
 </div>
 
-@endif
+@endcan
 @endsection

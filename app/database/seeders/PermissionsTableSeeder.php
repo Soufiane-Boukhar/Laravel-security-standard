@@ -9,9 +9,10 @@ class PermissionsTableSeeder extends Seeder
 {
     public function run()
     {
-        Permission::create(['name' => 'create projects']);
-        Permission::create(['name' => 'show projects']);
-        Permission::create(['name' => 'edit projects']);
+        Permission::create(['name' => 'create-ProjectController']);
+        Permission::create(['name' => 'index-ProjectController']);
+        Permission::create(['name' => 'show-ProjectController']);
+        Permission::create(['name' => 'edit-ProjectController']);
         Permission::create(['name' => 'update projects']);
         Permission::create(['name' => 'delete projects']);
     }

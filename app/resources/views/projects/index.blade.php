@@ -7,13 +7,11 @@
             <div class="col-sm-6">
                 <h1>Projects</h1>
             </div>
-            @role('admin|user')
             <div class="col-sm-6">
                 <a class="btn btn-primary float-right" href="{{ route('projects.create') }}">
                     Add New
                 </a>
             </div>
-            @endrole
 
         </div>
     </div>

@@ -17,7 +17,7 @@ class UserTableSeeder extends Seeder
             'password' => Hash::make('admin'),
             'created_at' => now(),
             'updated_at' => now()
-        ])->assignRole('admin');
+        ])->assignRole('admin')->givePermissionTo('index-ProjectController');
 
         User::create([
             'name' => 'Ahmed Alami',
