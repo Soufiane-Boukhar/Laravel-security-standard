@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+
+@if (auth()->check() && (auth()->user()->hasRole('admin') || auth()->user()->can('edit projects')))
+
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
@@ -36,4 +39,5 @@
 
         </div>
     </div>
+@endif
 @endsection
