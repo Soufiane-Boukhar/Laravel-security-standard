@@ -43,7 +43,7 @@
 <div class="container-wrapper">
     <div class="div">
         <div class="container">
-            <img src="{{ asset('assets/denied.png') }}" alt="" srcset="" width="700vw">
+            <img src="{{ asset('assets/denied.png') }}" alt="" srcset="" width="500vw">
         </div>
         <div class="title">
             <h3>You don't have access to this page</h3>
